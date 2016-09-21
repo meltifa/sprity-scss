@@ -1,6 +1,6 @@
 {
   "name": "sprity-scss",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "scss style processor for sprity",
   "repository": {
     "type": "git",
