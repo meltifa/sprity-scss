@@ -1,0 +1,62 @@
+{{#if layouts.[1].sprites.[1].ratio}}
+    $sprite-margin: ({{layouts.[0].layout.items.[0].width}} - {{layouts.[0].layout.items.[0].meta.width}}) / (2*{{layouts.[1].sprites.[1].ratio}});
+{{else}}
+    $sprite-margin: ({{layouts.[0].layout.items.[0].width}} - {{layouts.[0].layout.items.[0].meta.width}}) / 2;
+{{/if}}
+
+{{#each layouts}}
+  {{#each layout.items}}
+      ${{#if ../../opt.split}}{{cssesc ../../name}}-{{/if}}{{cssesc meta.name}}: -{{baseDim x}}px -{{baseDim y}}px {{baseDim meta.width}}px {{baseDim meta.height}}px;
+  {{/each}}
+{{/each}}
+
+@mixin sprite-width($sprite) {
+width: nth($sprite, 3);
+}
+
+@mixin sprite-height($sprite) {
+height: nth($sprite, 4);
+}
+
+@function sprite-width($sprite) {
+@return nth($sprite, 3);
+}
+
+@function sprite-height($sprite) {
+@return nth($sprite, 4);
+}
+
+@mixin sprite-position($sprite) {
+$sprite-offset-x: (nth($sprite, 1) - $sprite-margin);
+$sprite-offset-y: (nth($sprite, 2) - $sprite-margin);
+background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite($sprite, $display: inline-block) {
+@include sprite-position($sprite);
+background-repeat: no-repeat;
+display: $display;
+@include sprite-width($sprite);
+@include sprite-height($sprite);
+line-height: sprite-height($sprite);
+padding: 1px;
+background-origin: content-box;
+overflow: visible;
+}
+
+{{#each layouts}}
+  {{#each sprites}}
+
+    {{#if dpi}}
+        @media (-webkit-min-device-pixel-ratio: {{ratio}}), (min-resolution: {{dpi}}dpi) {
+    {{/if}}
+    {{../../indicator}}{{cssesc ../classname}} {
+    background-image: url('{{escimage url}}');
+    background-size: {{baseWidth}}px {{baseHeight}}px;
+    }
+    {{#if dpi}}
+        }
+    {{/if}}
+  {{/each}}
+
+{{/each}}
