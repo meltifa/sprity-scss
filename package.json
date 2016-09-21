@@ -20,7 +20,7 @@
     "name": "hanlei"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.5"
   },
   "main": "./index.js",
   "keywords": [
