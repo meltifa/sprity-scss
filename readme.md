@@ -1,8 +1,6 @@
-# sprity-sass
+# sprity-scss
 
-[![NPM version](https://badge.fury.io/js/sprity-sass.svg)](http://badge.fury.io/js/sprity-sass) [![Build Status](https://travis-ci.org/sprity/sprity-sass.svg?branch=master)](https://travis-ci.org/sprity/sprity-sass) [![Dependencies](https://david-dm.org/sprity/sprity-sass.svg)](https://david-dm.org/sprity/sprity-sass)
-
-> A sass/scss style processor for [sprity](https://npmjs.org/package/sprity)
+> A scss style processor for [sprity](https://npmjs.org/package/sprity)
 
 ## Requirements
 
@@ -10,16 +8,16 @@
 
 ## Install
 
-Install with [npm](https://npmjs.org/package/sprity-sass)
+Install with [npm](https://npmjs.org/package/sprity-scss)
 
 ```
-npm install sprity sprity-sass --save
+npm install sprity sprity-scss --save
 ```
 
-If you want to use `sprity-sass` with the command line interface of `sprity` install it globally.
+If you want to use `sprity-scss` with the command line interface of `sprity` install it globally.
 
 ```
-npm install sprity sprity-sass -g
+npm install sprity sprity-scss -g
 ```
 
 ## Options
