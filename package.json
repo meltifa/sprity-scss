@@ -1,14 +1,14 @@
 {
-  "name": "sprity-sass",
-  "version": "1.0.4",
-  "description": "scss/sass style processor for sprity",
+  "name": "sprity-scss",
+  "version": "1.0",
+  "description": "scss style processor for sprity",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sprity/sprity-sass.git"
+    "url": "https://github.com/meltifa/sprity-scss"
   },
-  "homepage": "https://github.com/sprity/sprity-sass",
+  "homepage": "https://github.com/meltifa/sprity-scss",
   "bugs": {
-    "url": "https://github.com/sprity/sprity-sass/issues"
+    "url": "https://github.com/meltifa/sprity-scss/issues"
   },
   "licenses": [
     {
@@ -17,17 +17,10 @@
     }
   ],
   "author": {
-    "name": "Alexander Slansky",
-    "email": "alexander@slansky.net",
-    "url": "http://slansky.net"
+    "name": "hanlei"
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "mocha --reporter spec",
-    "hint": "eslint index.js",
-    "style": "jscs index.js"
   },
   "main": "./index.js",
   "keywords": [
@@ -37,16 +30,5 @@
     "sass",
     "sprity",
     "css-sprite"
-  ],
-  "dependencies": {
-    "bluebird": "^2.9.24",
-    "fs-extra": "^0.18.0"
-  },
-  "devDependencies": {
-    "chai": "^2.2.0",
-    "cssesc": "^0.1.0",
-    "handlebars": "^3.0.1",
-    "mocha": "^2.2.4",
-    "prettydiff": "^1.11.11"
-  }
+  ]
 }
