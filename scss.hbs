@@ -1,5 +1,5 @@
-{{#if layouts.[1].sprites.[1].ratio}}
-    $sprite-margin: ({{layouts.[0].layout.items.[0].width}} - {{layouts.[0].layout.items.[0].meta.width}}) / (2*{{layouts.[1].sprites.[1].ratio}});
+{{#if layouts.[0].sprites.[1].ratio}}
+    $sprite-margin: ({{layouts.[0].layout.items.[0].width}} - {{layouts.[0].layout.items.[0].meta.width}}) / 4;
 {{else}}
     $sprite-margin: ({{layouts.[0].layout.items.[0].width}} - {{layouts.[0].layout.items.[0].meta.width}}) / 2;
 {{/if}}
@@ -9,7 +9,6 @@
       ${{#if ../../opt.split}}{{cssesc ../../name}}-{{/if}}{{cssesc meta.name}}: -{{baseDim x}}px -{{baseDim y}}px {{baseDim meta.width}}px {{baseDim meta.height}}px;
   {{/each}}
 {{/each}}
-
 @mixin sprite-width($sprite) {
 width: nth($sprite, 3);
 }

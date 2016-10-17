@@ -1,10 +1,10 @@
 {
   "name": "sprity-scss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "scss style processor for sprity",
   "repository": {
     "type": "git",
-    "url": "https://github.com/meltifa/sprity-scss"
+    "url": "git+https://github.com/meltifa/sprity-scss.git"
   },
   "homepage": "https://github.com/meltifa/sprity-scss",
   "bugs": {
@@ -30,5 +30,12 @@
     "sass",
     "sprity",
     "css-sprite"
-  ]
+  ],
+  "readme": "# sprity-scss\n\n> A scss style processor for [sprity](https://npmjs.org/package/sprity)\n\n## Requirements\n\n- [sprity](https://npmjs.org/package/sprity) version >= 1.0\n\n## Install\n\nInstall with [npm](https://npmjs.org/package/sprity-scss)\n\n```\nnpm install sprity sprity-scss --save\n```\n\nIf you want to use `sprity-scss` with the command line interface of `sprity` install it globally.\n\n```\nnpm install sprity sprity-scss -g\n```\n\n## Options\n\n* **style-type:** Eighter scss or sass. Defaults to scss.\n\n## Usage\n\nOn commandline:\n\n```sh\nsprity out/ src/*.png -s style.scss -p sass --style-type scss\n```\n\nIn JavaScript:\n\n```js\nvar sprite = require('sprity');\nsprite.create({\n  ...\n  style: 'style.scss',\n  processor: 'sass'\n  'style-type': 'scss'\n  ...\n}, function () {\n  console.log('done');\n});\n```\n\n#### [scss](http://sass-lang.com/) usage example\n\n```scss\n@import 'sprite'; // the generated style file (sprite.scss)\n\n// camera icon (camera.png in src directory)\n.icon-camera {\n  @include sprite($camera);\n}\n\n// cart icon (cart.png in src directory)\n.icon-cart {\n  @include sprite($cart);\n}\n```\n\n#### [sass](http://sass-lang.com/) usage example\n\n```sass\n@import 'sprite' // the generated style file (sprite.sass)\n\n// camera icon (camera.png in src directory)\n.icon-camera\n  +sprite($camera)\n\n// cart icon (cart.png in src directory)\n.icon-cart\n  +sprite($cart)\n```\n\n## More\n\nSee [sprity](https://npmjs.org/package/sprity) documentation\n\n---\n[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sprity/sprity?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)\n",
+  "readmeFilename": "readme.md",
+  "gitHead": "cdd94ffd47bdcc47b8211321bbb52862e9427284",
+  "_id": "sprity-scss@1.0.0",
+  "scripts": {},
+  "_shasum": "38fa9a4fde0cbcf8b72898fb595bc682a52e9390",
+  "_from": "sprity-scss@latest"
 }
