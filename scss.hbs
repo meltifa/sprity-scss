@@ -37,6 +37,10 @@ background-repeat: no-repeat;
 display: $display;
 @include sprite-width($sprite);
 @include sprite-height($sprite);
+}
+
+@mixin sprite-rem($sprite, $display: inline-block) {
+@include sprite($sprite, $display: inline-block);
 line-height: sprite-height($sprite);
 padding: 1px;
 background-origin: content-box;
